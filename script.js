@@ -441,7 +441,7 @@ function voltarParaInicio() {
   window.location.reload();
 }
 
-function copiarPix() {
+async function copiarPix() {
   const btn = document.getElementById('btnCopiarPix');
   try {
     await navigator.clipboard.writeText(state.pixPayload);
