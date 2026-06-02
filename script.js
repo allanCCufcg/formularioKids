@@ -16,8 +16,8 @@ const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzsznL8dnuiH92e
 
 //pra ver se vai
 
-const PIX_KEY      = '83982004834';              // Chave PIX (CPF, e-mail, telefone ou aleatória)
-const PIX_RECEIVER = 'Allan de Albuquerque Monteiro'; // Nome do beneficiário (max 25 chars)
+const PIX_KEY      = '(83) 98200-4834';              // Chave PIX (CPF, e-mail, telefone ou aleatória)
+const PIX_RECEIVER = 'Allan de Albuquerque Monteiro - PICPAY'; // Nome do beneficiário (max 25 chars)
 const PIX_CITY     = 'ALAGOA NOVA';
 
 /* Valores calculados localmente (espelho do servidor) */
