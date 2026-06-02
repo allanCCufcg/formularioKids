@@ -193,13 +193,32 @@ function crc16(str) {
    QR CODE
    ══════════════════════════════════════════════════════════════════ */
 async function renderizarQRCode(payload) {
+  const canvas = document.getElementById('qrcodeCanvas');
+  const img    = document.getElementById('qrcodeImage');
+  canvas.style.display = 'block';
+  img.style.display    = 'none';
+
   try {
-    await QRCode.toCanvas(document.getElementById('qrcodeCanvas'), payload, {
+    await QRCode.toCanvas(canvas, payload, {
       width:  220,
       margin: 2,
       color: { dark: '#0D1B2A', light: '#FFFFFF' },
     });
-  } catch (e) { console.error('QR Code error:', e); }
+  } catch (e) {
+    console.error('QR Code error:', e);
+    try {
+      const dataUrl = await QRCode.toDataURL(payload, {
+        width:  220,
+        margin: 2,
+        color: { dark: '#0D1B2A', light: '#FFFFFF' },
+      });
+      canvas.style.display = 'none';
+      img.src             = dataUrl;
+      img.style.display   = 'block';
+    } catch (err) {
+      console.error('QR Code fallback error:', err);
+    }
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -388,9 +407,9 @@ async function enviarComprovante() {
     });
 
     /* Feedback imediato — não esperamos confirmação do GAS */
-    abrirModal('modalComprovanteOk');
     document.getElementById('comprovanteCard').style.opacity       = '.5';
     document.getElementById('comprovanteCard').style.pointerEvents = 'none';
+    mostrarConfirmacaoFinal();
 
   } catch (err) {
     console.error('Erro ao preparar comprovante:', err);
@@ -410,7 +429,17 @@ async function enviarComprovante() {
 /* ══════════════════════════════════════════════════════════════════
    COPIAR PIX
    ══════════════════════════════════════════════════════════════════ */
-async function copiarPix() {
+async function mostrarConfirmacaoFinal() {
+  document.getElementById('pixSection').style.display = 'none';
+  document.getElementById('confirmSection').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function voltarParaInicio() {
+  window.location.reload();
+}
+
+function copiarPix() {
   const btn = document.getElementById('btnCopiarPix');
   try {
     await navigator.clipboard.writeText(state.pixPayload);
@@ -594,6 +623,7 @@ function inicializar() {
   /* Modais */
   document.getElementById('btnFecharErro').addEventListener('click', () => fecharModal('modalErro'));
   document.getElementById('btnFecharComprovanteOk').addEventListener('click', () => fecharModal('modalComprovanteOk'));
+  document.getElementById('btnVoltarInicio').addEventListener('click', voltarParaInicio);
   document.querySelectorAll('.modal-overlay').forEach(o => {
     o.addEventListener('click', (e) => { if (e.target === o) o.classList.remove('open'); });
   });
