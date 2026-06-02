@@ -67,6 +67,7 @@ ul { list-style: none; }
   color: var(--white);
   text-align: center;
   padding: 40px 24px 36px;
+  margin-bottom: 15px;
   position: relative;
   overflow: hidden;
 }
@@ -180,6 +181,7 @@ ul { list-style: none; }
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
   padding: 16px 24px;
+  padding-bottom: 10px;
   position: sticky;
   top: 0;
   z-index: 100;
