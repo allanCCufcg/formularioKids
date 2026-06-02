@@ -181,7 +181,7 @@ ul { list-style: none; }
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
   padding: 16px 24px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   position: sticky;
   top: 0;
   z-index: 100;
