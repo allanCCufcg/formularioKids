@@ -14,8 +14,8 @@
    ══════════════════════════════════════════════════════════════════ */
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxRkRWxOD0QeU6GHexXlpg1e4-wxvK-rHYvK2mSGQvI9LQ_Pvulf_8S-vTj3-hHmxiC/exec';
 
-const PIX_KEY      = '';              // Chave PIX (CPF, e-mail, telefone ou aleatória)
-const PIX_RECEIVER = 'PAROQUIA SANTA ANA'; // Nome do beneficiário (max 25 chars)
+const PIX_KEY      = '83982004834';              // Chave PIX (CPF, e-mail, telefone ou aleatória)
+const PIX_RECEIVER = 'Allan de Albuquerque Monteiro'; // Nome do beneficiário (max 25 chars)
 const PIX_CITY     = 'ALAGOA NOVA';
 
 /* Valores calculados localmente (espelho do servidor) */
