@@ -109,7 +109,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   border-radius: 24px;
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 250, 250, 0.76);
   animation: fadeInDown .6s .1s ease both;
 }
 .header-logo-image {
