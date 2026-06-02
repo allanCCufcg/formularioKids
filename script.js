@@ -14,6 +14,8 @@
    ══════════════════════════════════════════════════════════════════ */
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzsznL8dnuiH92e7r3euEx8V-PaORjQOGtHS8InsyBBbtrWzwYZaCy0Y5gqGF-JMX-G/exec';
 
+//pra ver se vai
+
 const PIX_KEY      = '83982004834';              // Chave PIX (CPF, e-mail, telefone ou aleatória)
 const PIX_RECEIVER = 'Allan de Albuquerque Monteiro'; // Nome do beneficiário (max 25 chars)
 const PIX_CITY     = 'ALAGOA NOVA';
