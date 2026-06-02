@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Corrida de Santa Ana — Categoria Kids</title>
+  <meta name="description" content="Inscrições abertas para a I Corrida de Santa Ana — Categoria Kids. Fé, tradição e superação em Alagoa Nova - PB." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- QR Code Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  HEADER                                      -->
+  <!-- ═══════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-badge">INSCRIÇÕES ABERTAS</div>
+      <div class="header-logo">
+        <!-- Ícone SVG representando corrida / superação -->
+        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="8" r="5" fill="#E24A2A"/>
+          <path d="M14 20c2-4 6-6 10-6s8 2 10 6l3 8-5 2-2-5v15h-4V28h-4v12h-4V25l-2 5-5-2 3-8z" fill="#fff"/>
+          <path d="M8 38h32" stroke="#E24A2A" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h1 class="header-title">I CORRIDA DE SANTA ANA</h1>
+      <p class="header-subtitle">Categoria Kids</p>
+      <p class="header-tagline">Fé, tradição e superação.</p>
+      <div class="header-divider"></div>
+      <div class="header-meta">
+        <span class="header-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Alagoa Nova - PB
+        </span>
+        <span class="header-meta-sep">·</span>
+        <span class="header-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Paróquia de Santa Ana
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PROGRESS BAR                                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="progress-bar-wrap" id="progressBarWrap" style="display:none;">
+    <div class="progress-steps">
+      <div class="progress-step active" data-step="1">
+        <div class="step-dot">1</div>
+        <span>Dados</span>
+      </div>
+      <div class="progress-connector"></div>
+      <div class="progress-step" data-step="2">
+        <div class="step-dot">2</div>
+        <span>Inscrição</span>
+      </div>
+      <div class="progress-connector"></div>
+      <div class="progress-step" data-step="3">
+        <div class="step-dot">3</div>
+        <span>Pagamento</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  MAIN                                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <main class="main-container">
+
+    <!-- ── INFO SECTION ── -->
+    <section class="info-section" id="infoSection">
+      <div class="info-grid">
+
+        <!-- Card Categorias -->
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="info-card-title">Categorias & Percursos</h3>
+          <ul class="category-list">
+            <li class="category-item">
+              <div class="category-age">6 – 7 anos</div>
+              <div class="category-track">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 12 19 12"/><polyline points="13 6 19 12 13 18"/></svg>
+                50 metros
+              </div>
+            </li>
+            <li class="category-item">
+              <div class="category-age">8 – 10 anos</div>
+              <div class="category-track">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 12 19 12"/><polyline points="13 6 19 12 13 18"/></svg>
+                100 metros
+              </div>
+            </li>
+            <li class="category-item">
+              <div class="category-age">11 – 13 anos</div>
+              <div class="category-track">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 12 19 12"/><polyline points="13 6 19 12 13 18"/></svg>
+                150 metros
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card Premiação -->
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V4h4"/><path d="M18 9h2a2 2 0 0 0 2-2V4h-4"/><path d="M12 17v4"/><path d="M8 21h8"/><path d="M12 17a5 5 0 0 0 5-5V4H7v8a5 5 0 0 0 5 5z"/></svg>
+          </div>
+          <h3 class="info-card-title">Premiação</h3>
+          <ul class="award-list">
+            <li class="award-item">
+              <span class="award-emoji">🏆</span>
+              <div>
+                <strong>Troféu</strong>
+                <span>para o 1º colocado de cada percurso</span>
+              </div>
+            </li>
+            <li class="award-item">
+              <span class="award-emoji">🏅</span>
+              <div>
+                <strong>Medalha</strong>
+                <span>para todos os participantes</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card Valores -->
+        <div class="info-card info-card--highlight">
+          <div class="info-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="info-card-title">Valores</h3>
+          <div class="price-grid">
+            <div class="price-item">
+              <span class="price-label">Sem camisa</span>
+              <span class="price-value">R$ 35</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-item">
+              <span class="price-label">Com camisa</span>
+              <span class="price-value">R$ 55</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── FORM SECTION ── -->
+    <section class="form-section" id="formSection">
+      <div class="form-container">
+
+        <div class="form-header">
+          <h2 class="form-title">Formulário de Inscrição</h2>
+          <p class="form-desc">Preencha os dados abaixo com atenção. Todos os campos marcados com <span class="required-star">*</span> são obrigatórios.</p>
+        </div>
+
+        <form id="inscricaoForm" novalidate>
+
+          <!-- ── BLOCO 1: DADOS DA CRIANÇA ── -->
+          <fieldset class="form-block">
+            <legend class="form-block-legend">
+              <span class="legend-number">01</span>
+              Dados da Criança
+            </legend>
+
+            <div class="field-group field-group--full">
+              <label class="field-label" for="nomeCrianca">Nome completo da criança <span class="required-star">*</span></label>
+              <input
+                class="field-input"
+                type="text"
+                id="nomeCrianca"
+                name="nomeCrianca"
+                placeholder="Nome completo"
+                autocomplete="name"
+                required
+              />
+              <span class="field-error" id="nomeCriancaError"></span>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label class="field-label" for="dataNascimento">Data de nascimento <span class="required-star">*</span></label>
+                <input
+                  class="field-input"
+                  type="date"
+                  id="dataNascimento"
+                  name="dataNascimento"
+                  required
+                />
+                <span class="field-error" id="dataNascimentoError"></span>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="sexo">Sexo <span class="required-star">*</span></label>
+                <div class="custom-select-wrap">
+                  <select class="field-input field-select" id="sexo" name="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                  </select>
+                  <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <span class="field-error" id="sexoError"></span>
+              </div>
+            </div>
+
+            <!-- Categoria automática -->
+            <div class="categoria-badge-wrap" id="categoriaBadgeWrap" style="display:none;">
+              <div class="categoria-badge">
+                <div class="categoria-badge-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div class="categoria-badge-info">
+                  <span class="categoria-badge-label">Categoria identificada</span>
+                  <strong class="categoria-badge-value" id="categoriaText">—</strong>
+                </div>
+                <div class="categoria-badge-track">
+                  <span id="percursoText">—</span>
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <!-- ── BLOCO 2: DADOS DO RESPONSÁVEL ── -->
+          <fieldset class="form-block">
+            <legend class="form-block-legend">
+              <span class="legend-number">02</span>
+              Dados do Responsável
+            </legend>
+
+            <div class="field-group field-group--full">
+              <label class="field-label" for="nomeResponsavel">Nome do responsável <span class="required-star">*</span></label>
+              <input
+                class="field-input"
+                type="text"
+                id="nomeResponsavel"
+                name="nomeResponsavel"
+                placeholder="Nome completo do responsável"
+                autocomplete="name"
+                required
+              />
+              <span class="field-error" id="nomeResponsavelError"></span>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label class="field-label" for="whatsapp">WhatsApp <span class="required-star">*</span></label>
+                <input
+                  class="field-input"
+                  type="tel"
+                  id="whatsapp"
+                  name="whatsapp"
+                  placeholder="(83) 99999-9999"
+                  maxlength="15"
+                  autocomplete="tel"
+                  required
+                />
+                <span class="field-error" id="whatsappError"></span>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="email">E-mail <span class="optional-tag">opcional</span></label>
+                <input
+                  class="field-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seuemail@exemplo.com"
+                  autocomplete="email"
+                />
+                <span class="field-error" id="emailError"></span>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <!-- ── BLOCO 3: TIPO DE INSCRIÇÃO ── -->
+          <fieldset class="form-block">
+            <legend class="form-block-legend">
+              <span class="legend-number">03</span>
+              Tipo de Inscrição
+            </legend>
+
+            <div class="tipo-inscricao-group">
+              <label class="tipo-card" id="tipoSemCamisa">
+                <input type="radio" name="tipoInscricao" value="Sem camisa" id="radioSemCamisa" required />
+                <div class="tipo-card-inner">
+                  <div class="tipo-card-radio">
+                    <div class="tipo-radio-dot"></div>
+                  </div>
+                  <div class="tipo-card-body">
+                    <span class="tipo-card-name">Sem camisa</span>
+                    <span class="tipo-card-desc">Apenas inscrição na corrida</span>
+                  </div>
+                  <div class="tipo-card-price">R$ 35</div>
+                </div>
+              </label>
+
+              <label class="tipo-card" id="tipoComCamisa">
+                <input type="radio" name="tipoInscricao" value="Com camisa" id="radioComCamisa" />
+                <div class="tipo-card-inner">
+                  <div class="tipo-card-radio">
+                    <div class="tipo-radio-dot"></div>
+                  </div>
+                  <div class="tipo-card-body">
+                    <span class="tipo-card-name">Com camisa</span>
+                    <span class="tipo-card-desc">Inscrição + camiseta exclusiva do evento</span>
+                  </div>
+                  <div class="tipo-card-price">R$ 55</div>
+                </div>
+              </label>
+            </div>
+            <span class="field-error" id="tipoInscricaoError"></span>
+
+            <!-- Campo condicional: tamanho da camisa -->
+            <div class="field-group field-group--full" id="campoTamanho" style="display:none;">
+              <label class="field-label" for="tamanhoCamisa">Tamanho da camisa <span class="required-star">*</span></label>
+              <div class="custom-select-wrap">
+                <select class="field-input field-select" id="tamanhoCamisa" name="tamanhoCamisa">
+                  <option value="">Selecione o tamanho</option>
+                  <optgroup label="Infantil">
+                    <option value="Infantil PP">Infantil PP</option>
+                    <option value="Infantil P">Infantil P</option>
+                    <option value="Infantil M">Infantil M</option>
+                    <option value="Infantil G">Infantil G</option>
+                    <option value="Infantil GG">Infantil GG</option>
+                  </optgroup>
+                  <optgroup label="Adulto">
+                    <option value="Adulto PP">Adulto PP</option>
+                    <option value="Adulto P">Adulto P</option>
+                    <option value="Adulto M">Adulto M</option>
+                    <option value="Adulto G">Adulto G</option>
+                    <option value="Adulto GG">Adulto GG</option>
+                    <option value="Adulto XG">Adulto XG</option>
+                  </optgroup>
+                </select>
+                <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <span class="field-error" id="tamanhoCamisaError"></span>
+            </div>
+
+          </fieldset>
+
+          <!-- ── RESUMO DA INSCRIÇÃO ── -->
+          <div class="resumo-card" id="resumoCard" style="display:none;">
+            <h4 class="resumo-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Resumo da Inscrição
+            </h4>
+            <div class="resumo-rows">
+              <div class="resumo-row">
+                <span class="resumo-label">Categoria</span>
+                <span class="resumo-value" id="resumoCategoria">—</span>
+              </div>
+              <div class="resumo-row">
+                <span class="resumo-label">Percurso</span>
+                <span class="resumo-value" id="resumoPercurso">—</span>
+              </div>
+              <div class="resumo-row">
+                <span class="resumo-label">Tipo</span>
+                <span class="resumo-value" id="resumoTipo">—</span>
+              </div>
+              <div class="resumo-row resumo-row--total">
+                <span class="resumo-label">Valor</span>
+                <span class="resumo-value resumo-total" id="resumoValor">R$ —</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── AUTORIZAÇÃO ── -->
+          <fieldset class="form-block form-block--auth">
+            <legend class="form-block-legend">
+              <span class="legend-number">04</span>
+              Autorização
+            </legend>
+
+            <label class="checkbox-label" for="autorizacao">
+              <input type="checkbox" id="autorizacao" name="autorizacao" required />
+              <span class="checkbox-custom">
+                <svg width="11" height="8" viewBox="0 0 11 8" fill="none"><polyline points="1 4 4 7 10 1" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="checkbox-text">
+                Declaro que autorizo a participação da criança acima identificada na <strong>Corrida de Santa Ana – Categoria Kids</strong>, assumindo total responsabilidade e ciência das normas do evento.
+              </span>
+            </label>
+            <span class="field-error" id="autorizacaoError"></span>
+
+          </fieldset>
+
+          <!-- ── SUBMIT ── -->
+          <div class="submit-wrap">
+            <button type="submit" class="btn-submit" id="btnSubmit">
+              <span class="btn-text">Inscrever agora</span>
+              <span class="btn-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="5 12 19 12"/><polyline points="13 6 19 12 13 18"/></svg>
+              </span>
+              <span class="btn-loading" style="display:none;">
+                <span class="spinner"></span>
+                Enviando...
+              </span>
+            </button>
+            <p class="submit-note">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Seus dados estão protegidos e seguros.
+            </p>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ── PIX SECTION ── -->
+    <section class="pix-section" id="pixSection" style="display:none;">
+      <div class="pix-container">
+
+        <div class="pix-success-header">
+          <div class="pix-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h2 class="pix-success-title">Inscrição realizada!</h2>
+            <p class="pix-success-sub">Número: <strong id="pixNumeroInscricao">—</strong></p>
+          </div>
+        </div>
+
+        <div class="pix-card">
+          <div class="pix-card-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Realize o pagamento via PIX para confirmar sua inscrição
+          </div>
+
+          <div class="pix-valor-wrap">
+            <span class="pix-valor-label">Valor a pagar</span>
+            <span class="pix-valor" id="pixValor">R$ —</span>
+          </div>
+
+          <div class="pix-qr-wrap">
+            <canvas id="qrcodeCanvas"></canvas>
+          </div>
+
+          <div class="pix-chave-wrap">
+            <span class="pix-chave-label">Código PIX Copia e Cola</span>
+            <div class="pix-copia-wrap">
+              <code class="pix-code" id="pixCopiaCola">—</code>
+              <button class="btn-copy" id="btnCopiarPix" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copiar
+              </button>
+            </div>
+          </div>
+
+          <div class="pix-chave-info">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+            Chave PIX: <strong id="pixChaveInfo">—</strong>
+            &nbsp;·&nbsp;
+            Beneficiário: <strong id="pixBeneficiario">—</strong>
+          </div>
+        </div>
+
+        <!-- Comprovante -->
+        <div class="comprovante-card" id="comprovanteCard">
+          <h3 class="comprovante-title">Enviar comprovante de pagamento</h3>
+          <p class="comprovante-desc">Após realizar o pagamento, envie o comprovante para agilizar a confirmação da sua inscrição.</p>
+
+          <div class="upload-area" id="uploadArea">
+            <input type="file" id="comprovanteFile" accept=".jpg,.jpeg,.png,.pdf" style="display:none;" />
+            <div class="upload-content" id="uploadContent">
+              <svg class="upload-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <p class="upload-text">Arraste o arquivo aqui ou <button type="button" class="upload-link" id="uploadBtn">clique para selecionar</button></p>
+              <span class="upload-hint">JPG, JPEG, PNG ou PDF — máx. 10 MB</span>
+            </div>
+            <div class="upload-preview" id="uploadPreview" style="display:none;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span id="uploadFileName">arquivo.pdf</span>
+              <button type="button" class="upload-remove" id="uploadRemove">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="btn-comprovante" id="btnEnviarComprovante" disabled>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Enviar comprovante
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  FOOTER                                      -->
+  <!-- ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg class="footer-logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="8" r="5" fill="#E24A2A"/>
+          <path d="M14 20c2-4 6-6 10-6s8 2 10 6l3 8-5 2-2-5v15h-4V28h-4v12h-4V25l-2 5-5-2 3-8z" fill="#fff" opacity=".7"/>
+        </svg>
+        <div>
+          <p class="footer-parish">Paróquia de Santa Ana</p>
+          <p class="footer-city">Alagoa Nova – PB</p>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="https://instagram.com/corridadesantaana" target="_blank" rel="noopener noreferrer" class="footer-instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @corridadesantaana
+        </a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 I Corrida de Santa Ana. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  MODAIS                                      -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Modal de erro -->
+  <div class="modal-overlay" id="modalErro" role="dialog" aria-modal="true" aria-labelledby="modalErroTitle">
+    <div class="modal">
+      <div class="modal-icon modal-icon--error">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <h3 class="modal-title" id="modalErroTitle">Algo deu errado</h3>
+      <p class="modal-desc" id="modalErroDesc">Ocorreu um erro ao processar sua inscrição. Por favor, tente novamente.</p>
+      <button class="btn-modal btn-modal--primary" id="btnFecharErro">Tentar novamente</button>
+    </div>
+  </div>
+
+  <!-- Modal comprovante enviado -->
+  <div class="modal-overlay" id="modalComprovanteOk" role="dialog" aria-modal="true" aria-labelledby="modalComprovanteTitle">
+    <div class="modal">
+      <div class="modal-icon modal-icon--success">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 class="modal-title" id="modalComprovanteTitle">Comprovante enviado!</h3>
+      <p class="modal-desc">Recebemos seu comprovante de pagamento. Nossa equipe verificará em breve e confirmará sua inscrição.</p>
+      <button class="btn-modal btn-modal--primary" id="btnFecharComprovanteOk">Ótimo!</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
