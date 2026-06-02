@@ -12,7 +12,7 @@
 /* ══════════════════════════════════════════════════════════════════
    ⚙️  CONFIGURAÇÕES — edite aqui
    ══════════════════════════════════════════════════════════════════ */
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxRkRWxOD0QeU6GHexXlpg1e4-wxvK-rHYvK2mSGQvI9LQ_Pvulf_8S-vTj3-hHmxiC/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzsznL8dnuiH92e7r3euEx8V-PaORjQOGtHS8InsyBBbtrWzwYZaCy0Y5gqGF-JMX-G/exec';
 
 const PIX_KEY      = '83982004834';              // Chave PIX (CPF, e-mail, telefone ou aleatória)
 const PIX_RECEIVER = 'Allan de Albuquerque Monteiro'; // Nome do beneficiário (max 25 chars)
