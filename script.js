@@ -23,7 +23,6 @@ const PIX_CITY     = 'ALAGOA NOVA';
 /* Valores calculados localmente (espelho do servidor) */
 const VALORES = {
   'Sem camisa': 35,
-  'Com camisa': 55,
 };
 
 /* ══════════════════════════════════════════════════════════════════
@@ -33,7 +32,6 @@ const state = {
   categoria:       '',
   percurso:        '',
   tipoInscricao:   '',
-  tamanhoCamisa:   '',
   valor:           0,
   numeroInscricao: '',
   pixPayload:      '',
@@ -283,12 +281,6 @@ function validarFormulario() {
   limparErro('tipoInscricao');
   if (!tipoSel) { mostrarErro('tipoInscricao', 'Selecione o tipo de inscrição.'); valido = false; }
 
-  limparErro('tamanhoCamisa');
-  if (state.tipoInscricao === 'Com camisa') {
-    const tamanho = document.getElementById('tamanhoCamisa').value;
-    if (!tamanho) { mostrarErro('tamanhoCamisa', 'Selecione o tamanho da camisa.'); valido = false; }
-  }
-
   const autorizacao = document.getElementById('autorizacao').checked;
   limparErro('autorizacao');
   if (!autorizacao) { mostrarErro('autorizacao', 'Você precisa autorizar a participação da criança.'); valido = false; }
@@ -340,9 +332,6 @@ async function enviarInscricao(e) {
       whatsapp:        document.getElementById('whatsapp').value.trim(),
       email:           document.getElementById('email').value.trim(),
       tipoInscricao:   state.tipoInscricao,
-      tamanhoCamisa:   state.tipoInscricao === 'Com camisa'
-                         ? document.getElementById('tamanhoCamisa').value
-                         : '',
       valor:           String(state.valor),
       numeroInscricao: state.numeroInscricao,
     };
@@ -577,28 +566,11 @@ function inicializar() {
     radio.addEventListener('change', function () {
       limparErro('tipoInscricao');
       state.tipoInscricao = this.value;
-      const campoTam = document.getElementById('campoTamanho');
-      const selTam   = document.getElementById('tamanhoCamisa');
-      if (this.value === 'Com camisa') {
-        campoTam.style.display = 'block';
-        selTam.required        = true;
-        state.valor            = VALORES['Com camisa'];
-      } else {
-        campoTam.style.display = 'none';
-        selTam.required        = false;
-        selTam.value           = '';
-        state.tamanhoCamisa    = '';
-        state.valor            = VALORES['Sem camisa'];
-      }
+      state.valor = VALORES[this.value];
       atualizarResumo();
       atualizarProgressBar(2);
     });
   });
-
-  /* Tamanho da camisa */
-  document.getElementById('tamanhoCamisa').addEventListener('change', function () {
-    limparErro('tamanhoCamisa');
-    state.tamanhoCamisa = this.value;
   });
 
   /* Máscara WhatsApp */

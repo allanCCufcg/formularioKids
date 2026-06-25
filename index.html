@@ -145,12 +145,8 @@
               <span class="price-label">Sem camisa</span>
               <span class="price-value">R$ 35</span>
             </div>
-            <div class="price-divider"></div>
-            <div class="price-item">
-              <span class="price-label">Com camisa</span>
-              <span class="price-value">R$ 55</span>
-            </div>
           </div>
+          <p style="font-size: 0.875rem; color: #dc2626; text-align: center; margin-top: 12px; font-weight: 500;">Inscrições com camisa encerradas (prazo: hoje até 12:00)</p>
         </div>
 
       </div>
@@ -307,48 +303,15 @@
                   <div class="tipo-card-price">R$ 35</div>
                 </div>
               </label>
-
-              <label class="tipo-card" id="tipoComCamisa">
-                <input type="radio" name="tipoInscricao" value="Com camisa" id="radioComCamisa" />
-                <div class="tipo-card-inner">
-                  <div class="tipo-card-radio">
-                    <div class="tipo-radio-dot"></div>
-                  </div>
-                  <div class="tipo-card-body">
-                    <span class="tipo-card-name">Com camisa</span>
-                    <span class="tipo-card-desc">Inscrição + camiseta exclusiva do evento</span>
-                  </div>
-                  <div class="tipo-card-price">R$ 55</div>
-                </div>
-              </label>
             </div>
             <span class="field-error" id="tipoInscricaoError"></span>
 
-            <!-- Campo condicional: tamanho da camisa -->
-            <div class="field-group field-group--full" id="campoTamanho" style="display:none;">
-              <label class="field-label" for="tamanhoCamisa">Tamanho da camisa <span class="required-star">*</span></label>
-              <div class="custom-select-wrap">
-                <select class="field-input field-select" id="tamanhoCamisa" name="tamanhoCamisa">
-                  <option value="">Selecione o tamanho</option>
-                  <optgroup label="Infantil (2 a 12 anos)">
-                    <option value="2 anos">2 anos</option>
-                    <option value="4 anos">4 anos</option>
-                    <option value="6 anos">6 anos</option>
-                    <option value="8 anos">8 anos</option>
-                    <option value="10 anos">10 anos</option>
-                    <option value="12 anos">12 anos</option>
-                  </optgroup>
-                  <optgroup label="Adulto">
-                    <option value="Adulto PP">Adulto PP</option>
-                    <option value="Adulto P">Adulto P</option>
-                    <option value="Adulto M">Adulto M</option>
-                    <option value="Adulto G">Adulto G</option>
-                    <option value="Adulto GG">Adulto GG</option>
-                  </optgroup>
-                </select>
-                <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <span class="field-error" id="tamanhoCamisaError"></span>
+            <!-- Aviso sobre prazo de inscrição com camisa -->
+            <div style="background-color: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 12px 16px; margin-top: 16px;">
+              <p style="color: #92400e; font-size: 0.875rem; margin: 0;">
+                <strong>⚠️ Inscrições com camisa encerradas</strong><br>
+                O prazo para inscrições com camiseta era hoje até as 12:00. Contate o organizador se deseja mais informações.
+              </p>
             </div>
 
           </fieldset>
