@@ -51,7 +51,7 @@ function calcularIdade(dataNascStr) {
 }
 
 function resolverCategoria(idade) {
-  if (idade >= 6  && idade <= 7)  return { categoria: '6 a 7 anos',   percurso: '50 metros'  };
+  if (idade >= 0  && idade <= 7)  return { categoria: '6 a 7 anos',   percurso: '50 metros'  };
   if (idade >= 8  && idade <= 10) return { categoria: '8 a 10 anos',  percurso: '100 metros' };
   if (idade >= 11 && idade <= 13) return { categoria: '11 a 13 anos', percurso: '150 metros' };
   return null;
@@ -252,7 +252,7 @@ function validarFormulario() {
   if (!dataNasc) {
     mostrarErro('dataNascimento', 'Informe a data de nascimento.'); valido = false;
   } else if (!state.categoria) {
-    mostrarErro('dataNascimento', 'Idade fora da faixa permitida (6 a 13 anos).'); valido = false;
+    mostrarErro('dataNascimento', 'Idade fora da faixa permitida (até 13 anos).'); valido = false;
   }
 
   const sexo = document.getElementById('sexo').value;
@@ -552,10 +552,13 @@ function inicializar() {
       document.getElementById('categoriaText').textContent = res.categoria;
       document.getElementById('percursoText').textContent  = res.percurso;
       wrap.style.display = 'block';
+      const aviso = document.getElementById('avisoMenorSeis');
+      aviso.style.display = idade < 6 ? 'block' : 'none';
     } else {
       state.categoria = ''; state.percurso = '';
       wrap.style.display = 'none';
-      mostrarErro('dataNascimento', 'Fora da faixa permitida. Categoria Kids: 6 a 13 anos.');
+      document.getElementById('avisoMenorSeis').style.display = 'none';
+      mostrarErro('dataNascimento', 'Fora da faixa permitida. Categoria Kids: até 13 anos.');
     }
     atualizarResumo();
     atualizarProgressBar(1);
@@ -570,7 +573,6 @@ function inicializar() {
       atualizarResumo();
       atualizarProgressBar(2);
     });
-  });
   });
 
   /* Máscara WhatsApp */
