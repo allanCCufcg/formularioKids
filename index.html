@@ -232,16 +232,29 @@
           <div id="avisoMenorSeis" style="display:none; background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:14px 16px; margin-top:16px; color:#92400e; font-size:0.95rem;">
             <strong>Atenção:</strong> Crianças com menos de 6 anos podem se inscrever na categoria de 50 metros, mas o responsável assume plena responsabilidade pela participação.
           </div>
-                id="nomeResponsavel"
-                name="nomeResponsavel"
-                placeholder="Nome completo do responsável"
-                autocomplete="name"
-                required
-              />
-              <span class="field-error" id="nomeResponsavelError"></span>
-            </div>
+        </fieldset>
 
-            <div class="field-row">
+        <fieldset class="form-block">
+          <legend class="form-block-legend">
+            <span class="legend-number">02</span>
+            Dados do Responsável
+          </legend>
+
+          <div class="field-group field-group--full">
+            <label class="field-label" for="nomeResponsavel">Nome do responsável <span class="required-star">*</span></label>
+            <input
+              class="field-input"
+              type="text"
+              id="nomeResponsavel"
+              name="nomeResponsavel"
+              placeholder="Nome completo do responsável"
+              autocomplete="name"
+              required
+            />
+            <span class="field-error" id="nomeResponsavelError"></span>
+          </div>
+
+          <div class="field-row">
               <div class="field-group">
                 <label class="field-label" for="whatsapp">WhatsApp <span class="required-star">*</span></label>
                 <input
