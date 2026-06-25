@@ -575,7 +575,7 @@ function inicializar() {
     });
   });
 
-  /* Máscara WhatsApp */
+  /* Máscara WhatsApp!!!!!!*/
   document.getElementById('whatsapp').addEventListener('input', function () {
     this.value = mascaraTelefone(this.value);
     limparErro('whatsapp');
